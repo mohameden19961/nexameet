@@ -1,0 +1,33 @@
+# Dépendances
+node_modules/
+vendor/
+
+# Build
+dist/
+build/
+.next/
+out/
+
+# Environnement et secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# Systèmes d'exploitation
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+
+# Fichiers temporaires
+tmp/
+temp/
+*.tmp
