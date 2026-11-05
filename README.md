@@ -14,6 +14,27 @@ décisions et tâches actionnables** grâce à l'IA.
 
 ---
 
+## 🌐 Documentation en ligne
+
+Toute la documentation est disponible sous forme de site web navigable :
+
+### **https://mohameden19961.github.io/nexameet/**
+
+Le site permet de :
+
+- parcourir les **22 sections** et les documents d'architecture ;
+- rechercher du texte dans l'ensemble de la documentation ;
+- afficher les diagrammes **Mermaid** (architecture, flux, modèle de données) ;
+- naviguer au clavier, en mode clair ou sombre, sur mobile comme sur desktop.
+
+En local, il suffit d'ouvrir [`index.html`](index.html) dans un navigateur.
+Le contenu est embarqué dans `content.js`, donc aucun serveur n'est nécessaire.
+
+> Après une modification des fichiers Markdown, régénérer le contenu du site avec
+> `node tools/build-content.js`.
+
+---
+
 ## Sommaire
 
 - [Pourquoi NexaMeet ?](#pourquoi-nexameet-)
@@ -271,7 +292,12 @@ Les 22 sections du catalogue fonctionnel sont documentées une par une.
 ```text
 nexameet/
 ├── README.md
+├── index.html                    # Site de documentation (GitHub Pages)
+├── content.js                    # Contenu Markdown embarqué (généré)
+├── .nojekyll                     # Désactive Jekyll sur GitHub Pages
 ├── .gitignore
+├── tools/
+│   └── build-content.js          # Régénère content.js depuis les .md
 ├── docs/
 │   ├── README.md                 # Index de la documentation
 │   ├── 01-authentification.md
@@ -312,6 +338,9 @@ nexameet/
 Ce dépôt est un **dépôt de spécification fonctionnelle et d'architecture cible**.
 Il ne contient pas encore de code applicatif : il sert de référence commune pour concevoir,
 développer, tester et présenter NexaMeet.
+
+La version web est disponible sur **https://mohameden19961.github.io/nexameet/**.
+Le fichier [`index.html`](index.html) peut aussi être ouvert directement en local.
 
 Trois parcours de lecture sont possibles :
 
