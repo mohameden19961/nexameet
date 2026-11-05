@@ -28,7 +28,9 @@ Le site permet de :
 - naviguer au clavier, en mode clair ou sombre, sur mobile comme sur desktop.
 
 En local, il suffit d'ouvrir [`index.html`](index.html) dans un navigateur.
-Le contenu est embarqué dans `content.js`, donc aucun serveur n'est nécessaire.
+Le contenu est embarqué dans `content.js` et les bibliothèques (Marked, Mermaid,
+Highlight.js) sont hébergées dans `assets/vendor/` : aucun serveur ni accès CDN
+n'est nécessaire.
 
 > Après une modification des fichiers Markdown, régénérer le contenu du site avec
 > `node tools/build-content.js`.
@@ -330,8 +332,12 @@ nexameet/
 │   └── modele-de-donnees.md
 └── assets/
     ├── NexaMeet.svg              # Diagramme source exporté
-    └── NexaMeet.drawio           # Version éditable (draw.io)
+    ├── NexaMeet.drawio           # Version éditable (draw.io)
+    └── vendor/                   # Bibliothèques locales (Marked, Mermaid, Highlight.js)
 ```
+
+Les bibliothèques tierces sont distribuées sous licences MIT (Marked, Mermaid)
+et BSD-3-Clause (Highlight.js) ; les textes sont dans `assets/vendor/licenses/`.
 
 ## Comment lire ce dépôt
 
